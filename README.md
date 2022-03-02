@@ -1,4 +1,4 @@
-# -1. MF 和乾坤的优劣势
+# 1. MF 和乾坤的优劣势
 
 1．single-spa：模块级微前端
 
@@ -6,7 +6,7 @@
 
 3．MF：基于webpack5的模块级微前端方案
 
-2. Qiankun的沙箱隔离主要实现了三种模式：
+# 2. Qiankun的沙箱隔离主要实现了三种模式：
 
 LegacySandbox  单例模式
 
@@ -14,7 +14,7 @@ ProxySandBox 多应用模式
 
 snapshotSanBox  不支持以上的降级方案
 
-3. 微前端是为了解决什么问题
+# 3. 微前端是为了解决什么问题
 
 历史项目共享，应用/模块 重复性使用，
 
@@ -22,7 +22,7 @@ snapshotSanBox  不支持以上的降级方案
 
 开箱即用，为插拔式开发，低代码拼装上，提供了无限想象，拓展能力
 
-4. http1.1,http2.0,https 的不同
+# 4. http1.1,http2.0,https 的不同
 
 多路复用,头部压缩,server push
 
@@ -43,11 +43,7 @@ https是http请求上，通过CA证书对称加密验证传送的步骤。
 3.所以利用随机数的对称加密保证后续通讯的安全性，也可以降低服务器的解密开销。
 4.HTTPS只针对传输内容进行加密，保证的是客户端和网站之间的信息就算被拦截也无法破解。如果不是全站HTTPS，仅仅只是在登录页采用HTTPS，那些HTTP连接的页面同样是危险的，从HTTP->HTTPS跳转依然可能被劫持。国内的部分银行就是这样，对安全性的考量还比不上百度，百度早就全站HTTPS了
 
- 
-
- 
-
-5. webpack，loader和plugin 区别
+# 5. webpack，loader和plugin 区别
 
 webpack的打包原理
 
@@ -77,7 +73,7 @@ loader和plugin的区别
 
 plugin是一个扩展器，它丰富了webpack本身，针对是loader结束后，webpack打包的整个过程，它并不直接操作文件，而是基于事件机制工作，会监听webpack打包过程中的某些节点，执行广泛的任务
 
-6. 首屏幕优化 有哪些手段
+# 6. 首屏幕优化 有哪些手段
 
 CDN加速
 
@@ -91,7 +87,7 @@ Service work 缓存处理
 
 模块抽离vendor
 
-7. Vue3.0的优化
+# 7. Vue3.0的优化
 
 静态标记
 
@@ -101,7 +97,7 @@ Service work 缓存处理
 
 options 编程方式升级为hooks编程方式
 
-8. React 和 vue 的diff 区别
+# 8. React 和 vue 的diff 区别
 
 1.Vue进行diff时，调用patch打补丁函数，一边比较一边给真实的DOM打补丁
 
@@ -113,7 +109,7 @@ options 编程方式升级为hooks编程方式
 
 ③当一个集合把最后一个节点移动到最前面，react会把前面的节点依次向后移动，而Vue只会把最后一个节点放在最前面，这样的操作来看，Vue的diff性能是高于react的
 
-9. AMD，CMD的区别
+# 9. AMD，CMD的区别
 
 common.js 基于module.exports的规范 同步的加载方案
 
@@ -131,11 +127,9 @@ ES6/export/import
 
 编译时加载，值饮用，按需加载
 
- 
+# 10. CI，CR，CD的流程
 
-10. CI，CR，CD的流程
-
-11. 浏览器强缓存
+# 11. 浏览器强缓存
 
 强缓存
 
@@ -176,7 +170,6 @@ Etag 存储的是文件的特殊标识(一般都是 hash 生成的)，服务器�
 Etag 的优先级高于 Last-Modified
 
  
-
 当浏览器要请求资源时
 
 调用 Service Worker 的 fetch 事件响应
@@ -199,7 +192,7 @@ Etag 的优先级高于 Last-Modified
 
 把响应内容存入 Service Worker 的 Cache Storage (如果 Service Worker 的脚本调用了 cache.put())
 
-12. 市场新的一些技术关注
+# 12. 市场新的一些技术关注
 
 web3.0  基于区块链的去中心化生态
 
@@ -213,13 +206,13 @@ vite vue3.0的打包工具
 
  
 
-13. 装饰器
+# 13. 装饰器
 
    装饰器是对类、函数、属性之类的一种装饰，可以针对其添加一些额外的行为。通俗的理解可以认为就是在原有代码外层包装了一层处理逻辑。
 
  
 
-14. promsie 控制并发
+# 14. promsie 控制并发
 
 function limitRunTask(tasks, limit) {
 
